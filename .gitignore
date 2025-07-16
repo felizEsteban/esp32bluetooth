@@ -1,15 +1,46 @@
+# Archivos de Android Studio
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Archivos generados por Gradle
+.gradle/
+build/
+local.properties
+/.externalNativeBuild/
+.cxx/
+
+# Archivos del sistema operativo
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+Thumbs.db
+ehthumbs.db
+
+# Archivos de registros
+*.log
+
+# Archivos temporales de editor
+*.swp
+*.swo
+
+# Archivos temporales de JetBrains IDE
+.idea/.name
+.idea/workspace.xml
+.idea/other.xml
+
+# Archivos de configuración de CI
+.gradle/
+
+# Archivos del sistema de archivos de macOS y otros sistemas
+.AppleDouble
+.LSOverride
+
+# Archivos generados por el sistema de desarrollo
+/captures/
+
+# Otros archivos que no se deben incluir en Git
 local.properties
