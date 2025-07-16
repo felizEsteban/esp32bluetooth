@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.datatxd.DataTxdFragment">
+
+    <!-- Imagen a la izquierda -->
+    <ImageView
+        android:id="@+id/led_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Imagen"
+        android:scaleType="fitCenter"
+        android:src="@drawable/imagenepica"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/info_layout"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Layout vertical a la derecha -->
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/led_image"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Control del LED"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Estado -->
+        <TextView
+            android:id="@+id/led_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado: Desconocido"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingBottom="32dp"/>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_led_on"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Encender"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/purple_200"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btn_led_off"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apagar"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/teal_700"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

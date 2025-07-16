@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.datatxd.DataTxdFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Control del LED"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/led_image"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Imagen"
+        android:scaleType="fitCenter"
+        android:src="@drawable/imagenepica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/led_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: Desconocido"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/led_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Botón Encender -->
+    <Button
+        android:id="@+id/btn_led_on"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Encender"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintTop_toBottomOf="@id/led_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_led_off"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Botón Apagar -->
+    <Button
+        android:id="@+id/btn_led_off"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apagar"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintTop_toBottomOf="@id/led_status"
+        app:layout_constraintStart_toEndOf="@id/btn_led_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
